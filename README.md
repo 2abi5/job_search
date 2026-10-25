@@ -46,7 +46,7 @@ Secrets live **only** in env vars — never commit them. `.env*` is gitignored.
 ## Run locally
 
 ```bash
-# from the repo root
+cd careerpilot
 npm install
 cp .env.example .env.local   # then fill in real values
 npm run dev                  # http://localhost:3000
@@ -55,11 +55,12 @@ npm run dev                  # http://localhost:3000
 ## Deploy to Vercel (permanent, free Hobby tier)
 
 1. Go to **[vercel.com/new](https://vercel.com/new)** and sign in with GitHub.
-2. Import the repository **`2abi5/job-search`**. The app lives at the repo root,
-   so Framework auto-detects as Next.js — leave build settings alone.
-3. Under **Environment Variables**, add `ANTHROPIC_API_KEY`, `AUTH_USERNAME`,
+2. Import this repository (`2abi5/abinash_research`).
+3. **Set “Root Directory” to `careerpilot`** (Edit → select the folder). Framework
+   auto-detects as Next.js — leave build settings alone.
+4. Under **Environment Variables**, add `ANTHROPIC_API_KEY`, `AUTH_USERNAME`,
    `AUTH_PASSWORD` and `AUTH_SECRET` (all for Production, Preview and Development).
-4. Click **Deploy**. You get a permanent `https://<project>.vercel.app` URL; every
+5. Click **Deploy**. You get a permanent `https://<project>.vercel.app` URL; every
    push to the connected branch redeploys automatically. Add a custom domain under
    Project → Settings → Domains if you want one.
 
